@@ -80,24 +80,5 @@ if (pauseButton != undefined) {
 }
 
 document.getElementById('reset').addEventListener('click', function() {
-    clearInterval(timerInterval);
-    totalSeconds = undefined;
-    remainingSeconds = undefined;
-    isPaused = false;
-    selectedOption = 'none';
-    document.getElementById('hours').value = '0';
-    document.getElementById('minutes').value = '0';
-    document.getElementById('seconds').value = '60';
-    document.getElementById('countdown').textContent = '';
-    const pauseButton = document.getElementsByClassName('pause')[0];
-    if (pauseButton) {
-        pauseButton.classList.remove('play');
-        pauseButton.classList.add('pause');
-    }
-    const musicDropdown = document.getElementById('music');
-    if (musicDropdown) {
-        musicDropdown.value = 'none';
-    }
-    audioElements[selectedOption].pause();
-    audioElements[selectedOption].currentTime=0;
+   location.reload();
 });
